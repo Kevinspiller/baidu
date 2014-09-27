@@ -32,10 +32,17 @@ public class Decifra {
 					
 					int b;
 					for(b = 0; b < armazena.length; b++){
+						if(armazena[b].contentEquals("") == false){
+							guardaTokens[a] = armazena[b];
+							b++;
+						}
+					}
+					
+					armazena = new String[armazena.length];
+					j++;
 						
 					
 					}
 				}
 			}
 		}
-}
