@@ -1,48 +1,38 @@
-import java.io.File;
 import java.util.Scanner;
+import java.io.*;
 
-public class Decifra {
-	public static void main(String args[]){
-		int i = 0;
-		String guardaPalavras[] = new String[2000];
-		String guardaTokens[] = new String[4000];
-		
-		try{
-				File arquivoaDecifrar = new File(args[0]);
-				Scanner s = new Scanner(arquivoaDecifrar);
-			
-				while(s.hasNextLine()){
-				
-					guardaPalavras[i] = s.nextLine();
-					i++;
-				
-				}
-				
-				int j = 0;
-				String armazena[] = new String[300];
-				
-				while(guardaPalavras[j]!= null){
-					
-					int a = 0;
-					armazena = guardaPalavras[j].split("\\s");
-					
-					while(guardaPalavras[a]!= null){
-						a++;
-					}
-					
-					int b;
-					for(b = 0; b < armazena.length; b++){
-						if(armazena[b].contentEquals("") == false){
-							guardaTokens[a] = armazena[b];
-							b++;
-						}
-					}
-					
-					armazena = new String[armazena.length];
-					j++;
-						
-					
-					}
-				}
-			}
-		}
+class Baidu {
+    public static void main(String args[]) throws Exception {
+        File f;
+        Scanner s;
+        Interpretador b;
+        String linhas[] = new String[2000]; // arquivo pode ter, no máximo, 2000 linhas.
+        
+        try {
+            // Referencia o arquivo. args[0] conterá os dados passados pela linha de comando.
+            f = new File(args[0]);
+            // Mandamos o Scanner ler a partir do arquivo.
+            s = new Scanner(f);
+            // Instanciamos o interpretador.
+            b = new Interpretador();
+            
+            // Lemos todas as linhas do arquivo para dentro do
+            // vetor "linhas".
+            int i = 0;
+            while(s.hasNext()) {
+                linhas[i] = s.nextLine();
+                i++;
+            }
+            
+            // Inicializamos o interpretador com o vetor de linhas. A partir
+            // desse ponto, o objeto "b" irá interpretar o código lido do arquivo.
+            b.interpreta(linhas);
+            
+        } catch (IOException e) {
+            System.out.println("Nao consegui ler o arquivo: " + (args.length > 0 ? args[0] : "(desconhecido)"));
+            System.out.println("Uso:");
+            System.out.println("    java Baidu /caminho/para/arquivo.baidu");
+        }
+        
+    }
+}
