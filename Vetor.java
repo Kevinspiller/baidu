@@ -7,4 +7,12 @@ class Vetor{
 		this.vector = new double[campo];
 	}
 	
+	public String getName(){
+		return this.nome;
+	}
+	
+	public double getValor(int i) {
+		return this.vetor[i];
+	}
+	
 }
