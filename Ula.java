@@ -73,7 +73,39 @@
 		}
 		return resultado;
 	}
- 	
+	
+	public boolean maiorIgual(String expressao, double num, double num2){
+		boolean resultado = false;
+		expressao = expressao.trim();
+		if(expressao.equals("maiorigual")){
+			if(num >= num2){
+				resultado = true;
+			}
+		}
+		return resultado;
+	}
+	
+	public boolean menorIgual(String expressao, double num, double num2){
+		boolean resultado = false;
+		expressao = expressao.trim();
+		if(expressao.equals("menorigual")){
+			if(num <= num2){
+				resultado = true;
+			}
+		}
+		return resultado;
+	}
+	
+	public boolean igual(String expressao, double num, double num2){
+		boolean resultado = false;
+		expressao = expressao.trim();
+		if(expressao.equals("igual")){
+			if(num == num2){
+				resultado = true;
+			}
+		}
+		return resultado;
+	}
 	
 	
  	
