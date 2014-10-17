@@ -52,4 +52,29 @@
  		}
  	}
  	
+	public boolean maior(String expressao, double num, double num2){
+		boolean resultado = false; //inicializado como falso, ou seja, caso nao entre no if sempre sera falso
+		expressao = expressao.trim();
+		if(expressao.equals("maior")){
+			if(num>num2){
+				resultado = true;
+			}
+		}
+		return resultado;
+ 	}
+	
+	public boolean menor(String expressao, double num, double num2){
+		boolean resultado = false;
+		expressao = expressao.trim();
+		if(expressao.equals("menor")){
+			if(num<num2){
+				resultado = true;
+			}
+		}
+		return resultado;
+	}
+ 	
+	
+	
+ 	
 }
