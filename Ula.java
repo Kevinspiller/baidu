@@ -107,6 +107,14 @@
 		return resultado;
 	}
 	
-	
- 	
+	public boolean diferente(String expressao, double num, double num2){
+		boolean resultado = false;
+		expressao = expressao.trim();
+		if(expressao.equals("dif")){
+			if(num != num2){
+				resultado = true;
+			}
+		}
+		return resultado;
+	}
 }
