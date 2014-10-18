@@ -45,5 +45,41 @@ import java.util.Scanner;
         System.exit(1);
     }
 
+	void scan(String var){
+        int end = verificaVariavel(var);
+        if(end != 0){
+            Scanner s = new Scanner(System.in);
+            this.vetor[end].setValor(s.nextDouble());
+        }
+        else erro(5);
+    }
+	
+	
+	public void criaVariavel(String a){
+        int i;
 
+        if(this.verificaVariavel(a) != 0){ // para criacao de variaveis 
+                this.erro(0);
+        }
+        
+        if(controle < this.vetor.length){
+            this.vetor[controle].setNome(a);
+            this.controle++;
+        }
+        else this.erro(1);
+    }
+	
+
+	public int verificaVariavel(String var){	   
+        int i;
+        for(i = 1; i < this.controle; i++){
+            if(var.equals(this.vetor[i].getNome())){ // controle da variavel 
+                return i;
+            }
+        }
+        return 0;
+    }
+	
+	
+	
 }
