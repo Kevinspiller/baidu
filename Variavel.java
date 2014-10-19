@@ -6,7 +6,7 @@ class Variaveis{
 		String verificaPosicao, compara="nada", aux="nada";//string intermediaria que faz manipulação de cada linha do vetor do codigo
 		
 		Variaveis objVariaveis = new Variaveis();
-		ContFluxo objFluxo = new ContFluxo();
+		Fluxo objFluxo = new Fluxo();
 		Pilha p = new Pilha();
 		Operacoes objOperacoes = new Operacoes();
 		Comandos  objComandos = new Comandos();
