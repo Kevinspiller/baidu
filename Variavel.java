@@ -1,11 +1,11 @@
-class Variaveis{
+class Variavel{
 
 	public void procuraVariavel(String codigo[],int contLinhas){//procura as variaveis
 	
 		int i=0, s=0, linhasGuardaVariavel=0, a=0, b=0, volta=0;//contador de linhas do vetor de variaveis
 		String verificaPosicao, compara="nada", aux="nada";//string intermediaria que faz manipulação de cada linha do vetor do codigo
 		
-		Variaveis objVariaveis = new Variaveis();
+		Variavel objVariaveis = new Variavel();
 		Fluxo objFluxo = new Fluxo();
 		Pilha p = new Pilha();
 		Operacoes objOperacoes = new Operacoes();
