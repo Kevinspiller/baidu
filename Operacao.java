@@ -70,6 +70,18 @@ import java.util.Scanner;
     }
 	
 
+	 public Double getDouble(String operando){
+        double numero = 0.0;
+        try{
+            numero = Double.parseDouble(operando);
+            return numero;
+        }catch(Exception e){
+            this.erro(6);
+        }
+       return num;
+    }
+	
+	
 	public int verificaVariavel(String var){	   
         int i;
         for(i = 1; i < this.controle; i++){
