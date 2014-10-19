@@ -44,4 +44,4 @@ class Decifra {
 
 			objVariavel.procuraVar(code,countLine);//declaracao de variaveis
 		}
-	}
+}
