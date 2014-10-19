@@ -42,7 +42,7 @@ class Variaveis{
 			if (verificaPosicao.contains("SE(")) {//verifica condições
 					
 				a=i;//se caso não entrar no if a controla o salto
-				i = objFluxo.fazCtrFluxo(verificaPosicao,guardaVariavel,guardaValores,linhasGuardaVariavel,i);//ocorrencia do if, manda inclusive qual é a linha em que ele esta
+				i = objFluxo.ControlaFluxo(verificaPosicao,guardaVariavel,guardaValores,linhasGuardaVariavel,i);//ocorrencia do if, manda inclusive qual é a linha em que ele esta
 				//se i recebe 0 eh pq o if não eh valido então procuro pelo fim se a partir de i
 				
 				if(i==-1){
@@ -60,7 +60,7 @@ class Variaveis{
 					
 			} else if(verificaPosicao.contains("LACO(")){//controle de laco
 				b=i; // b recebe a linha de execução
-				i = objFluxo.fazCtrFluxo(verificaPosicao,guardaVariavel,guardaValores,linhasGuardaVariavel,i);//retorna linha do laco onde deve executar
+				i = objFluxo.ControlaFluxo(verificaPosicao,guardaVariavel,guardaValores,linhasGuardaVariavel,i);//retorna linha do laco onde deve executar
 				if(i!=-1){
 					volta=i;
 					p.push(volta);
@@ -76,7 +76,7 @@ class Variaveis{
 					}
 				}
 					
-			} else if(verificaPos.contains("ENDWHILE;")) {
+			} else if(verificaPosicao.contains("ENDWHILE;")) {
 				if(p.ponteiro>-1){
 					i=p.pop()-1;//menos 1 para que depois do encremento a linha correta seja averiguada
 				}
