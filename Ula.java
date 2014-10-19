@@ -1,9 +1,9 @@
  class Ula {
 	 
- 	public double soma(String expressao, double num, double num2){
+ 	public double Mais(String expressao, double num, double num2){
  		double resultado = 0.0;
  		expressao = expressao.trim();
- 		if(expressao.equals("soma")){
+ 		if(expressao.equals("MAIS")){
  			resultado = num+num2;
  			return resultado;
  		}
@@ -13,10 +13,10 @@
  		}
  	}
  	
- 	public double subtracao(String expressao, double num, double num2){
+ 	public double Menos(String expressao, double num, double num2){
  		double resultado = 0.0;
  		expressao = expressao.trim();
- 		if(expressao.equals("sub")){
+ 		if(expressao.equals("MENOS")){
  			resultado = num - num2;
  			return resultado;
  		}
@@ -26,10 +26,10 @@
  		}
  	}
  	
- 	public double multiplicacao(String expressao, double num, double num2){
+ 	public double Multiplicacao(String expressao, double num, double num2){
  		double resultado = 0.0;
  		expressao = expressao.trim();
- 		if(expressao.equals("mult")){
+ 		if(expressao.equals("MULT")){
  			resultado = num * num2;
  			return resultado;
  		}
@@ -39,10 +39,10 @@
  		}
  	}
  	
- 	public double divisao(String expressao, double num, double num2){
+ 	public double Divisao(String expressao, double num, double num2){
  		double resultado = 0.0;
  		expressao = expressao.trim();
- 		if(expressao.equals("div")){
+ 		if(expressao.equals("DIV")){
  			resultado = num / num2;
  			return resultado;
  		}
@@ -52,10 +52,10 @@
  		}
  	}
  	
-	public boolean maior(String expressao, double num, double num2){
+	public boolean Maior(String expressao, double num, double num2){
 		boolean resultado = false; //inicializado como falso, ou seja, caso nao entre no if sempre sera falso
 		expressao = expressao.trim();
-		if(expressao.equals("maior")){
+		if(expressao.equals("MAIOR")){
 			if(num>num2){
 				resultado = true;
 			}
@@ -63,10 +63,10 @@
 		return resultado;
  	}
 	
-	public boolean menor(String expressao, double num, double num2){
+	public boolean Menor(String expressao, double num, double num2){
 		boolean resultado = false;
 		expressao = expressao.trim();
-		if(expressao.equals("menor")){
+		if(expressao.equals("MENOR")){
 			if(num<num2){
 				resultado = true;
 			}
@@ -74,10 +74,10 @@
 		return resultado;
 	}
 	
-	public boolean maiorIgual(String expressao, double num, double num2){
+	public boolean MaiorIgual(String expressao, double num, double num2){
 		boolean resultado = false;
 		expressao = expressao.trim();
-		if(expressao.equals("maiorigual")){
+		if(expressao.equals("MAIORIGUAL")){
 			if(num >= num2){
 				resultado = true;
 			}
@@ -85,10 +85,10 @@
 		return resultado;
 	}
 	
-	public boolean menorIgual(String expressao, double num, double num2){
+	public boolean MenorIgual(String expressao, double num, double num2){
 		boolean resultado = false;
 		expressao = expressao.trim();
-		if(expressao.equals("menorigual")){
+		if(expressao.equals("MENORIGUAL")){
 			if(num <= num2){
 				resultado = true;
 			}
@@ -96,10 +96,10 @@
 		return resultado;
 	}
 	
-	public boolean igual(String expressao, double num, double num2){
+	public boolean Igual(String expressao, double num, double num2){
 		boolean resultado = false;
 		expressao = expressao.trim();
-		if(expressao.equals("igual")){
+		if(expressao.equals("IGUAL")){
 			if(num == num2){
 				resultado = true;
 			}
@@ -107,10 +107,10 @@
 		return resultado;
 	}
 	
-	public boolean diferente(String expressao, double num, double num2){
+	public boolean Diferente(String expressao, double num, double num2){
 		boolean resultado = false;
 		expressao = expressao.trim();
-		if(expressao.equals("dif")){
+		if(expressao.equals("DIF")){
 			if(num != num2){
 				resultado = true;
 			}
