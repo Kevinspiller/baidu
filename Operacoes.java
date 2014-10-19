@@ -33,7 +33,7 @@ class Operacoes{
 
 		if(cont_atribui==1 && atribu==1 ){
 					
-					double valor_atribuicao=verGuardaVar2(atribuicao, guardaVar, guardaValores, linhasGuardaVar);// valor a ser atribuido
+					double valor_atribuicao=verGuardaVar2(atribuicao, guardaVariavel, guardaValores, linhasGuardaVariavel);// valor a ser atribuido
 
 					valorAtual(valor_atribuicao, aux, guardaVariavel, guardaValores, linhasGuardaVariavel);//atribui o valor a variavel que esta recebendo
 
@@ -83,7 +83,7 @@ class Operacoes{
 	}
 	
 	
-	public void valorAtual(double res, String aux, String [] guardaVariavel, double [] guardaValores, int linhasGuardaVar){
+	public void valorAtual(double res, String aux, String [] guardaVariavel, double [] guardaValores, int linhasGuardaVariavel){
 		
 		for(int i=0; i<linhasGuardaVariavel; i++){
 
@@ -140,10 +140,4 @@ class Operacoes{
 			System.exit(1);
 		}
 	}
-}
-
-
-	
-		
-		
 }
