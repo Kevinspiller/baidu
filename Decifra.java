@@ -1,3 +1,7 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
 
 class Decifra {
@@ -42,6 +46,6 @@ class Decifra {
 
 			}
 
-			objVariavel.procuraVar(code,countLine);//declaracao de variaveis
+			objVariavel.procuraVariavel(code,countLine);//declaracao de variaveis
 		}
 }
