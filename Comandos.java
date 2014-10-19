@@ -15,7 +15,7 @@ class Comandos{
 		
 		} else if(verificaPosicao.startsWith("IMPRIMA(")){
 			aux=verificaPosicao.substring(verificaPosicao.indexOf("(")+1, verificaPosicao.indexOf(");"));
-			oper.Error(guardaVar,aux,linhasGuardaVariavel); // verifico se a variavel foi declarada
+			oper.Error(guardaVariavel,aux,linhasGuardaVariavel); // verifico se a variavel foi declarada
 			auxiliar= buscaValor(aux, guardaVariavel, guardaValores, linhasGuardaVariavel);
 			System.out.println(auxiliar);
 		}		
@@ -36,7 +36,7 @@ class Comandos{
 		int i=0;
 	
 		for(i=0; i<linhasGuardaVariavel; i++){
-			if(guardaVar[i].equals(aux3)){
+			if(guardaVariavel[i].equals(aux3)){
 				auxiliar = guardaValores[i];//auxiliar que é um double recebe o valor da variavel que esta no vetor guarda valores
 			}	
 		}	
