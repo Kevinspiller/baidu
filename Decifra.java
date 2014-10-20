@@ -16,10 +16,10 @@ class Decifra {
 		
 		
 
-		public Decifra(String path){//construtor
+		public Decifra(){//construtor
 
 			try{	//tratamento de erro sobre a read do arquivo
-				arquivoR = new FileReader(path); //abre o arquivo
+				arquivoR = new FileReader("Mundo.txt"); //abre o arquivo
 				buffer = new BufferedReader(arquivoR);//metodo mais rapido
 				
 				while(buffer.ready()){
