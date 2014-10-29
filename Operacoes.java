@@ -8,7 +8,7 @@ class Operacoes{
 		double res=0;
 		int cont_atribui=1,atribu=0;//controle de atribuição, se não houver tokens de operações será uma atribuição
 		
-		aux=verificaPosicao.substring(0, verificaPosicao.indexOf("RECEBE"));//essa eh a variavel que irá receber o valor ex a=a+b ela sempre tera a primeira variavel
+		aux=verificaPosicao.substring(0, verificaPosicao.indexOf("="));//essa eh a variavel que irá receber o valor ex a=a+b ela sempre tera a primeira variavel
 		Error(guardaVariavel,aux,linhasGuardaVariavel);//verifica se a variavel ja foi declarada
 
 		
@@ -67,7 +67,7 @@ class Operacoes{
 		double auxiliar=0;
 		int i=0;
 	
-		if(aux3.matches("^[0.0-9.9]*#")){//expresão regular para verificar se é numero
+		if(aux3.matches("^[0.0-9.9]*|")){//expresão regular para verificar se é numero
 			auxiliar = Double.parseDouble(aux3);//casting de string para double			
 		}
 		else {//se for variavel
