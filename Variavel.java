@@ -26,11 +26,15 @@ class Variavel{
 			}
 
 		
-			
+			if(verificaPosicao.contains("=")){//procura pelo token de atribuição (=);
+			objOperacoes.verificaOperador(verificaPosicao,guardaVariavel,guardaValores,linhasGuardaVariavel);//verifica o operador
+			}	
 			if(verificaPosicao.contains("IMPRIMA(")){//procura pela palavra chave IMPRIMA
 				objComandos.verificaSaida(verificaPosicao,guardaVariavel,guardaValores,linhasGuardaVariavel);//verifica e imprime string
 			}
- 			
+			if(verificaPosicao.contains("ESCREVA(")){
+			objComandos.verificaEntrada(verificaPosicao,guardaVariavel,guardaValores,linhasGuardaVariavel);
+		}
 		}	
 	}
 }
