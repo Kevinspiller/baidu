@@ -5,9 +5,10 @@ class Variavel{
 		int i=0, s=0, linhasGuardaVariavel=0, a=0, b=0, volta=0;//contador de linhas do vetor de variaveis
 		String verificaPosicao, compara="nada", aux="nada";//string intermediaria que faz manipulação de cada linha do vetor do codigo
 		
-		Variavel objVariaveis = new Variavel();
+		Variavel objVariavel = new Variavel();
 		Operacoes objOperacoes = new Operacoes();
 		Comandos  objComandos = new Comandos();
+		Fluxo objFluxo = new Fluxo();
 
 		String [] guardaVariavel = new String[2000];//VETOR DE VARIAVEIS
 		double [] guardaValores = new double[2000];//VALORES DE CADA VARIAVEL
@@ -34,7 +35,26 @@ class Variavel{
 			}
 			if(verificaPosicao.contains("ESCREVA(")){
 			objComandos.verificaEntrada(verificaPosicao,guardaVariavel,guardaValores,linhasGuardaVariavel);
-		}
+			}
+			if (verificaPosicao.contains("SE(")) {
+				
+				a=i;//se caso não entrar no if a controla o salto
+				i = objFluxo.ControlaFluxo(verificaPosicao,guardaVariavel,guardaValores,linhasGuardaVariavel,i);//ocorrencia do if, manda inclusive qual é a linha em que ele esta
+				//se i recebe 0 eh pq o if não eh valido então procuro pelo fim se aparit de i
+				
+				if(i==-1){
+					compara="FIM;";
+					for (a+=1; a<contLinhas; a++) {//procura pelo end
+						if(codigo[a].equals(compara)){//encrementa as linhas do código
+							i=a;//i recebe um indice anterior ao que deve proceguir incrementa no for e segue o baile
+							break;
+						}
+					}
+				}
+				
+			} else if(verificaPosicao.contains("FIM;")) {
+				continue;
 		}	
 	}
+  }
 }
