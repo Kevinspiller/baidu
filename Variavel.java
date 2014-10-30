@@ -63,7 +63,7 @@ class Variavel{
 					f.push(volta);
 				}
 			} if(i==-1){//se caso a condição do while não for verdadeira
-					compara="FIMLACO";
+					compara="FIMLACO;";
 					for(b+=1; b<contLinhas; b++) {//procura pelo FIMLACO;
 						if(codigo[b].equals(compara)){//encrementa as linhas do código
 							i=b;//i recebe um indice anterior ao que deve proseguir no for e continua o laco ate q de falso
@@ -72,11 +72,12 @@ class Variavel{
 						}
 					}
 				}
-			} else if(verificaPosicao.contains("FIMLACO;")) {
+			 else if(verificaPosicao.contains("FIMLACO;")) {
 				if(f.pointer>-1){
 					i=f.pop()-1;//menos 1 para que depois do encremento a linha correta seja verificada
 				}
 				
 			}
 		}
+	}
 }
