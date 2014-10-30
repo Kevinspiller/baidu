@@ -9,6 +9,7 @@ class Variavel{
 		Operacoes objOperacoes = new Operacoes();
 		Comandos  objComandos = new Comandos();
 		Fluxo objFluxo = new Fluxo();
+		FluxoLaco f = new FluxoLaco();
 
 		String [] guardaVariavel = new String[2000];//VETOR DE VARIAVEIS
 		double [] guardaValores = new double[2000];//VALORES DE CADA VARIAVEL
@@ -59,6 +60,7 @@ class Variavel{
 				i = objFluxo.ControlaFluxo(verificaPosicao,guardaVariavel,guardaValores,linhasGuardaVariavel,i);//retorna linha do laco onde deve executar
 				if(i!=-1){
 					volta=i;
+					f.push(volta);
 				}
 			} if(i==-1){//se caso a condição do while não for verdadeira
 					compara="FIMLACO";
@@ -70,7 +72,11 @@ class Variavel{
 						}
 					}
 				}
-			
-	}
-  }
+			} else if(verificaPosicao.contains("FIMLACO;")) {
+				if(f.pointer>-1){
+					i=f.pop()-1;//menos 1 para que depois do encremento a linha correta seja verificada
+				}
+				
+			}
+		}
 }
