@@ -38,7 +38,7 @@ class Variavel{
 			}
 			if (verificaPosicao.contains("SE(")) {
 				
-				a=i;//se caso não entrar no if a controla o salto
+				a=i;//se caso não entrar no if a controla o avanço
 				i = objFluxo.ControlaFluxo(verificaPosicao,guardaVariavel,guardaValores,linhasGuardaVariavel,i);//ocorrencia do if, manda inclusive qual é a linha em que ele esta
 				//se i recebe 0 eh pq o if não eh valido então procuro pelo fim se aparit de i
 				
@@ -46,7 +46,7 @@ class Variavel{
 					compara="FIM;";
 					for (a+=1; a<contLinhas; a++) {//procura pelo end
 						if(codigo[a].equals(compara)){//encrementa as linhas do código
-							i=a;//i recebe um indice anterior ao que deve proceguir incrementa no for e segue o baile
+							i=a;//i recebe um indice anterior ao que deve proseguir no if e continua ate que seja falso
 							break;
 						}
 					}
@@ -54,7 +54,14 @@ class Variavel{
 				
 			} else if(verificaPosicao.contains("FIM;")) {
 				continue;
-		}	
+			}	else if(verificaPosicao.contains("LACO(")){//controle de laco
+				b=i; // b recebe a linha de execução
+				i = objFluxo.ControlaFluxo(verificaPosicao,guardaVariavel,guardaValores,linhasGuardaVariavel,i);//retorna linha do laco onde deve executar
+				if(i!=-1){
+					volta=i;
+				}
+			} 
+			
 	}
   }
 }
