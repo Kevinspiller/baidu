@@ -13,8 +13,14 @@ class FluxoLaco{
 
 	public int pop{
 
-			return this.vetor[this.pointer--];
+			return this.array[this.pointer--];
 
+	}
+
+	public void push(int v){
+		if (this.pointer < this.array.length-1) {//verifica se ponteiro n passa do tamanho do vetor, caso sim, ocorre uma exceção
+			this.array[++pointer]=v;
+		}
 	}
 
 
