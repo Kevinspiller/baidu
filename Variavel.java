@@ -54,7 +54,14 @@ class Variavel{
 				
 			} else if(verificaPosicao.contains("FIM;")) {
 				continue;
-		}	
+			}	else if(verificaPosicao.contains("LACO(")){//controle de laco
+				b=i; // b recebe a linha de execução
+				i = objFluxo.ControlaFluxo(verificaPosicao,guardaVariavel,guardaValores,linhasGuardaVariavel,i);//retorna linha do laco onde deve executar
+				if(i!=-1){
+					volta=i;
+				}
+			}
+			
 	}
   }
 }
