@@ -60,7 +60,16 @@ class Variavel{
 				if(i!=-1){
 					volta=i;
 				}
-			} 
+			} if(i==-1){//se caso a condição do while não for verdadeira
+					compara="FIMLACO";
+					for(b+=1; b<contLinhas; b++) {//procura pelo FIMLACO;
+						if(codigo[b].equals(compara)){//encrementa as linhas do código
+							i=b;//i recebe um indice anterior ao que deve proseguir no for e continua o laco ate q de falso
+							break;
+
+						}
+					}
+				}
 			
 	}
   }
