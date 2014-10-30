@@ -24,10 +24,11 @@ class Decifra {
 				
 				while(buffer.ready()){
 					code[read]=buffer.readLine();//code recebe o que esta na buffer a cada linha, assim cada posicao do vetor de string tem uma linha
-					
+						
 					code[read]=code[read].replaceAll("\t","");
 					if(code[read].startsWith("IMPRIMA('")){
-						code[read]=code[read].replaceAll(" ","|"); //retirando os espacos das strings e susbstitui por |, caso for uma impressao
+						code[read]=code[read].replaceAll(" ","^"); //retirando os espacos das strings e susbstitui por |, caso for uma impressao
+						System.out.println("TESTA");
 				
 					} else {
 						code[read]=code[read].replaceAll(" ",""); // retira os espacos das strings
