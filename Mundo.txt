@@ -1,1 +1,39 @@
-IMPRIMA ('OLA MUNDO');
+var a$
+var num$
+var resultado$
+var op$
+var op2$
+var zero$
+var num2$
+var dois$
+var j$
+var cont$
+
+
+op$ = 1;
+op2$ = 2;
+zero$ = 0;
+num2$ = 1;
+dois$ = 2;
+
+IMPRIMA('Digite o seu numero');
+ESCREVA(num$);
+
+IMPRIMA('Digite 1 para descobrir se um numero eh par ou impar');
+IMPRIMA('Digite 2 para descobrir se o numero eh primo');
+ESCREVA(a$);
+
+SE(a$@op$)
+
+resultado$ = num$%2;
+
+SE(resultado$@zero$)
+IMPRIMA('Eh par');
+FIM;
+
+SE(resultado$#zero$)
+IMPRIMA('Eh impar');
+FIM;
+
+FIM;
+
