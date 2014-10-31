@@ -1,39 +1,47 @@
-var a$
 var num$
 var resultado$
-var op$
-var op2$
 var zero$
 var num2$
 var dois$
 var j$
 var cont$
 
-
-op$ = 1;
-op2$ = 2;
 zero$ = 0;
 num2$ = 1;
 dois$ = 2;
 
+IMPRIMA('Programa para testar se um numero eh par ou impar e primo ou nao');
+
 IMPRIMA('Digite o seu numero');
+
 ESCREVA(num$);
-
-IMPRIMA('Digite 1 para descobrir se um numero eh par ou impar');
-IMPRIMA('Digite 2 para descobrir se o numero eh primo');
-ESCREVA(a$);
-
-SE(a$@op$)
 
 resultado$ = num$%2;
 
 SE(resultado$@zero$)
-IMPRIMA('Eh par');
+	IMPRIMA('Eh par');
 FIM;
 
 SE(resultado$#zero$)
-IMPRIMA('Eh impar');
+	IMPRIMA('Eh impar');
 FIM;
 
+j$=num$+1;
+LACO(num2$<j$)
+	resultado$=num$%num2$;
+	SE(resultado$@zero$)
+		cont$=cont$+1;
+	FIM;
+	num2$=num2$+1;
+FIMLACO;
+
+SE(cont$@dois$)
+	IMPRIMA('Eh primo');
 FIM;
+
+SE(cont$#dois$)
+	IMPRIMA('Nao eh primo');
+FIM;			
+
+
 
