@@ -43,5 +43,20 @@ SE(cont$#dois$)
 	IMPRIMA('Nao eh primo');
 FIM;			
 
+IMPRIMA('Programa para calcular a media de dois numeros');
+
+IMPRIMA('Digite o primeiro numero');
+
+ESCREVA(num$);
+
+IMPRIMA('Digite o segundo numero');
+
+ESCREVA(num2$);
+
+cont$=num$+num2$;
+
+resultado$=cont$/2;
+
+IMPRIMA(resultado$);
 
 
