@@ -3,7 +3,7 @@ import java.util.Scanner;
 class Comandos{
 	Operacoes oper=new Operacoes();
 	
-	public void verificaSaida(String verificaPosicao, String [] guardaVariavel, double [] guardaValores, int linhasGuardaVariavel){//recebe a linha na qual existe a palavra mostrar
+	public void verificaSaida(String verificaPosicao, String [] guardaVariavel, double [] guardaValores, int linhasGuardaVariavel){//recebe a linha na qual existe a palavra IMPRIMA
 		String aux="nada";
 		double auxiliar=0;
 		

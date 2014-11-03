@@ -20,14 +20,14 @@ class Decifra {
 
 			try{	//tratamento de erro sobre a read do arquivo
 				arquivoR = new FileReader("Mundo.txt"); //abre o arquivo
-				buffer = new BufferedReader(arquivoR);//metodo mais rapido
+				buffer = new BufferedReader(arquivoR);
 				
 				while(buffer.ready()){
 					code[read]=buffer.readLine();//code recebe o que esta na buffer a cada linha, assim cada posicao do vetor de string tem uma linha
 						
 					code[read]=code[read].replaceAll("\t","");
 					if(code[read].startsWith("IMPRIMA('")){
-						code[read]=code[read].replaceAll(" ","^"); //retirando os espacos das strings e susbstitui por |, caso for uma impressao
+						code[read]=code[read].replaceAll(" ","^"); //retirando os espacos das strings e susbstitui por ^, caso for uma impressao
 					} else {
 						code[read]=code[read].replaceAll(" ",""); // retira os espacos das strings
 					}

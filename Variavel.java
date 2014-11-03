@@ -22,7 +22,7 @@ class Variavel{
 				verificaPosicao = verificaPosicao.substring(3);//guarda a partir do terceiro caractere
 
 				guardaVariavel[s]=verificaPosicao.replaceAll("$","");//retira o $ da variavel
-				guardaValores[s]=0;//cada variavel recebe 0 inicialmente----------------------------------------verificar se é null a variavel
+				guardaValores[s]=0;//cada variavel recebe 0 inicialmente - verificar se é null a variavel
 				s++;
 				linhasGuardaVariavel++;
 			}
@@ -41,11 +41,11 @@ class Variavel{
 				
 				a=i;//se caso não entrar no if a controla o avanço
 				i = objFluxo.ControlaFluxo(verificaPosicao,guardaVariavel,guardaValores,linhasGuardaVariavel,i);//ocorrencia do if, manda inclusive qual é a linha em que ele esta
-				//se i recebe 0 eh pq o if não eh valido então procuro pelo fim se aparit de i
+				//se i recebe 0 eh pq o if não eh valido então procuro pelo fim se apartir de i
 				
 				if(i==-1){
 					compara="FIM;";
-					for (a+=1; a<contLinhas; a++) {//procura pelo end
+					for (a+=1; a<contLinhas; a++) {//procura pelo FIM
 						if(codigo[a].equals(compara)){//encrementa as linhas do código
 							i=a;//i recebe um indice anterior ao que deve proseguir no if e continua ate que seja falso
 							break;

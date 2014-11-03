@@ -43,7 +43,7 @@ class Operacoes{
 			}
 		
 		
-		public double verGuardaVar2(String aux2, String [] guardaVariavel, double [] guardaValores, int linhasGuardaVariavel) { //realiza uma atribuiçao caso aux 2 seja uma string ou um numero
+		public double verGuardaVar2(String aux2, String [] guardaVariavel, double [] guardaValores, int linhasGuardaVariavel) { //realiza uma atribuiçao caso aux2 seja uma string ou um numero
 
 		double auxiliar=0;//auxiliar de retorno
 		int i=0;
