@@ -19,7 +19,7 @@ class Decifra {
 		public Decifra(){//construtor
 
 			try{	//tratamento de erro sobre a read do arquivo
-				arquivoR = new FileReader("Mundo.txt"); //abre o arquivo
+				arquivoR = new FileReader("Mundo.bd"); //abre o arquivo
 				buffer = new BufferedReader(arquivoR);
 				
 				while(buffer.ready()){

@@ -5,10 +5,14 @@ var num2$
 var dois$
 var j$
 var cont$
+var sete$
+var dez$
 
-zero$ = 0;
 num2$ = 1;
 dois$ = 2;
+sete$ = 7;
+dez$ = 10;
+
 
 IMPRIMA('Programa para testar se um numero eh par ou impar e primo ou nao');
 
@@ -33,10 +37,18 @@ LACO(num2$<j$)
 		cont$=cont$+1;
 	FIM;
 	num2$=num2$+1;
+	LACO(dez$>zero$)
+		IMPRIMA(dez$);
+		dez$ = dez$ - 1;
+			
+	FIMLACO;
 FIMLACO;
-
 SE(cont$@dois$)
 	IMPRIMA('Eh primo');
+
+	SE(num$>sete$)
+		IMPRIMA('o numero e primo e maior do que sete');
+	FIM;
 FIM;
 
 SE(cont$#dois$)
@@ -58,5 +70,3 @@ cont$=num$+num2$;
 resultado$=cont$/2;
 
 IMPRIMA(resultado$);
-
-
