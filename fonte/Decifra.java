@@ -12,7 +12,7 @@ class Decifra {
 		public int read=0, countLine=0, i=0;
 		
 		Variavel objVariavel = new Variavel();//objeto das variaveis
-		String [] code = new String[1000];//vetor de strings que armazena o codigo a ser tratado
+		String [] code = new String[4000];//vetor de strings que armazena o codigo a ser tratado
 		
 		
 
@@ -27,8 +27,8 @@ class Decifra {
 						
 					code[read]=code[read].replaceAll("\t","");
 					if(code[read].startsWith("IMPRIMA('")){
-						code[read]=code[read].replaceAll(" ","^"); //retirando os espacos das strings e susbstitui por ^, caso for uma impressao
-					} else {
+					} 
+					else {
 						code[read]=code[read].replaceAll(" ",""); // retira os espacos das strings
 					}
 

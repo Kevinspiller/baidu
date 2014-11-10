@@ -2,7 +2,7 @@ class Variavel{
 
 	public void procuraVariavel(String codigo[],int contLinhas){//procura as variaveis
 	
-		int i=0, s=0, linhasGuardaVariavel=0, a=0, b=0, volta=0;//contador de linhas do vetor de variaveis
+		int i=0, s=0, linhasGuardaVariavel=0, a=0, b=0,z=0, volta=0;//contador de linhas do vetor de variaveis
 		String verificaPosicao, compara="nada", aux="nada";//string intermediaria que faz manipulação de cada linha do vetor do codigo
 		
 		Variavel objVariavel = new Variavel();
@@ -44,18 +44,28 @@ class Variavel{
 				//se i recebe 0 eh pq o if não eh valido então procuro pelo fim se apartir de i
 				
 				if(i==-1){
+					z=1;
 					compara="FIM;";
 					for (a+=1; a<contLinhas; a++) {//procura pelo FIM
-						if(codigo[a].equals(compara)){//encrementa as linhas do código
+						if(codigo[a].contains("SE(")){
+							z++;
+						}
+						if(codigo[a].contains("FIM;")){
+							z--;
+						}
+						if(codigo[a].equals(compara)  && z == 0){//encrementa as linhas do código
 							i=a;//i recebe um indice anterior ao que deve proseguir no if e continua ate que seja falso
 							break;
 						}
 					}
 				}
 				
-			} else if(verificaPosicao.contains("FIM;")) {
+			} 
+
+			else if(verificaPosicao.contains("FIM;")) {
 				continue;
-			}	else if(verificaPosicao.contains("LACO(")){//controle de laco
+			}	
+			else if(verificaPosicao.contains("LACO(")){//controle de laco
 				b=i; // b recebe a linha de execução
 				i = objFluxo.ControlaFluxo(verificaPosicao,guardaVariavel,guardaValores,linhasGuardaVariavel,i);//retorna linha do laco onde deve executar
 				if(i!=-1){

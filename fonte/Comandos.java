@@ -9,7 +9,6 @@ class Comandos{
 		
 		if(verificaPosicao.startsWith("IMPRIMA('")){
 		aux=verificaPosicao.substring(verificaPosicao.indexOf("('")+2, verificaPosicao.indexOf("');"));
-		aux=aux.replaceAll("^","");
 		System.out.println(aux);
 		
 		} else if(verificaPosicao.startsWith("IMPRIMA(")){

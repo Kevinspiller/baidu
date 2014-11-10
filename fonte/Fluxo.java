@@ -33,7 +33,7 @@ class Fluxo {
 				
 				return linha;//condicao valida entao continua executando na proxima linha.
 			}
-			else{//verifica onde esta o fimse e retorna a linha que deve ser executada
+			else{//verifica onde esta o fim e retorna a linha que deve ser executada
 				return -1;
 			}
 		}
