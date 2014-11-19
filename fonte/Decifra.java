@@ -3,6 +3,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
+import java.io.File;
 
 class Decifra {
 	
@@ -16,10 +17,10 @@ class Decifra {
 		
 		
 
-		public Decifra(){//construtor
+		public Decifra(File arquivo){//construtor
 
 			try{	//tratamento de erro sobre a read do arquivo
-				arquivoR = new FileReader("Mundo.bd"); //abre o arquivo
+				arquivoR = new FileReader(arquivo); //abre o arquivo
 				buffer = new BufferedReader(arquivoR);
 				
 				while(buffer.ready()){
